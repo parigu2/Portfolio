@@ -32,6 +32,7 @@ class DesktopContainer extends Component {
             textAlign='center'
             style={{ minHeight: 700, padding: '1em 0em' }}
             vertical
+            id="home"
           >
             <Menu
               fixed={fixed ? 'top' : null}
@@ -41,12 +42,13 @@ class DesktopContainer extends Component {
               size='large'
             >
               <Container>
-                <Menu.Item as='a' active>
+                <Menu.Item as='a' href="#home">
                   Home
                 </Menu.Item>
-                <Menu.Item as='a'>Skill</Menu.Item>
-                <Menu.Item as='a'>Project</Menu.Item>
-                <Menu.Item as='a'>Contact</Menu.Item>
+                <Menu.Item as='a' href="#intro">About</Menu.Item>
+                <Menu.Item as='a' href="#skill">Skill</Menu.Item>
+                <Menu.Item as='a' href="#project">Project</Menu.Item>
+                <Menu.Item as='a' href="#footer">Contact</Menu.Item>
                 <Menu.Item position='right'>
                   <Button as='a' inverted={!fixed} primary={fixed} style={{ marginLeft: '0.5em' }}>
                     E-MAIL

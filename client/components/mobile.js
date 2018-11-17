@@ -30,12 +30,13 @@ class MobileContainer extends Component {
       <Responsive maxWidth={Responsive.onlyMobile.maxWidth}>
         <Sidebar.Pushable>
           <Sidebar as={Menu} animation='uncover' inverted vertical visible={sidebarOpened}>
-            <Menu.Item as='a' active>
+            <Menu.Item as='a' href="home">
               Home
             </Menu.Item>
-            <Menu.Item as='a'>Skill</Menu.Item>
-            <Menu.Item as='a'>Project</Menu.Item>
-            <Menu.Item as='a'>Contact</Menu.Item>
+            <Menu.Item as='a' href="#intro">About</Menu.Item>
+            <Menu.Item as='a' href="#skill">Skill</Menu.Item>
+            <Menu.Item as='a' href="#project">Project</Menu.Item>
+            <Menu.Item as='a' href="#footer">Contact</Menu.Item>
           </Sidebar>
 
           <Sidebar.Pusher
@@ -48,6 +49,7 @@ class MobileContainer extends Component {
               textAlign='center'
               style={{ minHeight: 350, padding: '1em 0em' }}
               vertical
+              id="#home"
             >
               <Container>
                 <Menu inverted pointing secondary size='large'>
