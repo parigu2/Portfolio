@@ -4,5 +4,7 @@
  * having to figure out which file they belong to!
  */
 export {default as Navbar} from './navbar'
-export {default as UserHome} from './user-home'
+export {default as Main} from './main'
+export {default as Contact} from './contact'
+export {default as HomepageHeading} from './heading.js'
 export {Login, Signup} from './auth-form'
