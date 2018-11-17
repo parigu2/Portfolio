@@ -52,7 +52,7 @@ class Project extends Component {
         {
           projects.map((project, idx)=>{
             return (
-            <div key={idx}>
+            <div key={idx} id="projectCard">
               <Header as='h3' style={{ fontSize: '2em' }}>
                 {project.name}
               </Header>

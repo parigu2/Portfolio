@@ -24,3 +24,7 @@ form div {
   display: flex;
   flex-direction: column;
 }
+
+#projectCard:hover {
+  color: rgba(0, 0, 0, 0)
+}
