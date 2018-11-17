@@ -45,13 +45,14 @@ class Project extends Component {
 
   render() {
     return (
-      <Segment style={{ padding: '8em 0em' }} vertical>
+      <Segment style={{ padding: '8em 0em' }} vertical
+      id="project">
       <Container text>
-        <Header as='h2' style={{ fontSize: '3em', margin: '1em 0em'}}>Project</Header>
+        <Header as='h2' style={{ fontSize: '3em', marginBottom: '1em'}}>Project</Header>
         {
-          projects.map(project=>{
+          projects.map((project, idx)=>{
             return (
-            <div key={project.name}>
+            <div key={idx}>
               <Header as='h3' style={{ fontSize: '2em' }}>
                 {project.name}
               </Header>
@@ -75,9 +76,17 @@ class Project extends Component {
                   </div>
                 </Modal.Content>
                 </Modal>
-              <Divider
-                style={{ margin: '3em 0em', textTransform: 'uppercase' }}
-              />
+                {
+                  idx === 2 ?
+                  <Divider
+                  as='h4'
+                  className='header'
+                  horizontal
+                  style={{ margin: '3em 0em', textTransform: 'uppercase' }}>
+                    <p>Side Project</p>
+                  </Divider> :
+                  <Divider style={{ margin: '3em 0em', textTransform: 'uppercase' }}/>
+                }
             </div>)
           })
         }
@@ -92,14 +101,6 @@ class Project extends Component {
         <Button as='a' size='large'>
           I'm Still Quite Interested
         </Button>
-        <Divider
-          as='h4'
-          className='header'
-          horizontal
-          style={{ margin: '3em 0em', textTransform: 'uppercase' }}
-        >
-          <a href='#'>Case Studies</a>
-        </Divider>
       </Container>
     </Segment>
     )
