@@ -14,23 +14,17 @@ import {
 
 const projects = [{
   name: 'Capstone - WIREHEAD',
-  detail: `First Instead of focusing on content creation and hard work, we have learned how to master the
-  art of doing nothing by providing massive amounts of whitespace and generic content that
-  can seem massive, monolithic and worth your attention.`,
+  detail: `First Instead of focusing on content creation and hard work, we have learned how`,
   image: 'favicon.png',
   url: '2Q_PyxAE3Mo'
 },{
   name: 'Stackaton Proejct - 3D Game',
-  detail: `Second Instead of focusing on content creation and hard work, we have learned how to master the
-  art of doing nothing by providing massive amounts of whitespace and generic content that
-  can seem massive, monolithic and worth your attention.`,
+  detail: `Second Instead of focusing on content creation and hard work, we have learned how`,
   image: 'favicon.png',
   url: `OuLYWN4k3nk`
 },{
   name: 'Grace Shopper Project - Maskot',
-  detail: `Third Instead of focusing on content creation and hard work, we have learned how to master the
-  art of doing nothing by providing massive amounts of whitespace and generic content that
-  can seem massive, monolithic and worth your attention.`,
+  detail: `Third Instead of focusing on content creation and hard work, we have learned how`,
   image: 'favicon.png',
   url: `OuLYWN4k3nk`
 }]
@@ -55,9 +49,9 @@ class Project extends Component {
           projects.map((project, idx)=>{
             return (
             <div key={idx} id="projectCard">
-              <Header as='h3' style={{ fontSize: '2em' }}>
+              {/* <Header as='h3' style={{ fontSize: '2em' }}>
                 {project.name}
-              </Header>
+              </Header> */}
               <p style={{ fontSize: '1.33em' }}>
                 {project.detail}
               </p>
