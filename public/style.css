@@ -23,6 +23,15 @@ form div {
 .modalContent {
   display: flex;
   flex-direction: column;
+  margin: 0 60px;
+}
+
+.ui.modal.transition.visible.active {
+  width: 650px;
+}
+
+.ui.embed {
+  margin-bottom: 15px;
 }
 
 .projectGrid {
