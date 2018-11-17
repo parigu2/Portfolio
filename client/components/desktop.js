@@ -44,15 +44,12 @@ class DesktopContainer extends Component {
                 <Menu.Item as='a' active>
                   Home
                 </Menu.Item>
+                <Menu.Item as='a'>Skill</Menu.Item>
                 <Menu.Item as='a'>Project</Menu.Item>
-                <Menu.Item as='a'>Blog</Menu.Item>
                 <Menu.Item as='a'>Contact</Menu.Item>
                 <Menu.Item position='right'>
-                  <Button as='a' inverted={!fixed}>
-                    Log in
-                  </Button>
                   <Button as='a' inverted={!fixed} primary={fixed} style={{ marginLeft: '0.5em' }}>
-                    Sign Up
+                    E-MAIL
                   </Button>
                 </Menu.Item>
               </Container>
