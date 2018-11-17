@@ -8,7 +8,8 @@ import {
   Modal,
   Image,
   Embed,
-  Reveal
+  Reveal,
+  Card
 } from 'semantic-ui-react'
 
 const projects = [{
@@ -47,8 +48,9 @@ class Project extends Component {
     return (
       <Segment style={{ padding: '8em 0em' }} vertical
       id="project">
-      <Container text>
-        <Header as='h2' style={{ fontSize: '3em', marginBottom: '1em'}}>Project</Header>
+      <Container>
+        <Header as='h2' style={{ fontSize: '3em', marginBottom: '1em'}} id="projectHeader">Project</Header>
+        <div className="projectGrid">
         {
           projects.map((project, idx)=>{
             return (
@@ -90,6 +92,7 @@ class Project extends Component {
             </div>)
           })
         }
+        </div>
         <Header as='h3' style={{ fontSize: '2em' }}>
           Did We Tell You About Our Bananas?
         </Header>

@@ -25,6 +25,29 @@ form div {
   flex-direction: column;
 }
 
+.projectGrid {
+  align-self: center;
+  display: flex;
+  flex-wrap: wrap;
+  width: 80vw;
+  margin: 0 5vw;
+}
+
+#projectHeader {
+  text-align: center
+}
+
+#projectCard {
+  margin: 15px;
+  background-color: teal;
+  width: 20em;
+  height: 13em;
+  overflow: hidden;
+  color: rgba(0, 0, 0, 0);
+  -webkit-transition: color 0.5s;
+  transition: color 0.5s;
+}
+
 #projectCard:hover {
-  color: rgba(0, 0, 0, 0)
+  color: rgba(0, 0, 0, 1)
 }
