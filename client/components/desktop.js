@@ -1,6 +1,5 @@
 import PropTypes from 'prop-types'
 import React, { Component } from 'react'
-import {connect} from 'react-redux'
 import {
   Button,
   Container,
@@ -11,7 +10,6 @@ import {
   Modal
 } from 'semantic-ui-react'
 import {HomepageHeading, FormEmail} from './index'
-import sendEmailThunk from '../store/email'
 import axios from 'axios'
 
 class DesktopContainer extends Component {
@@ -19,6 +17,8 @@ class DesktopContainer extends Component {
     super()
     this.state = {
       sender: '',
+      name: '',
+      organization: '',
       subject: '',
       message: '',
       modalOpen: false
@@ -49,11 +49,12 @@ class DesktopContainer extends Component {
   async handleSubmit(event) {
     event.preventDefault()
 
-    // await this.props.send(this.state)
     axios.post('/api/mail', this.state)
 
     this.setState({
       sender: '',
+      name: '',
+      organization: '',
       subject: '',
       message: '',
       modalOpen: false
@@ -102,10 +103,8 @@ class DesktopContainer extends Component {
                 >E-MAIL</Button>}
                 open={this.state.modalOpen}
                 onClose={this.handleClose}>
-                <Modal.Header>Edit Product</Modal.Header>
+                <Modal.Header>To Minkyu Yang</Modal.Header>
                 <Modal.Content image>
-                  {/* <Image wrapped size='medium' src={this.state.imageUrl} /> */}
-                    {/* <h2 className="title">Edit Product</h2> */}
                   <Modal.Description>
                     <FormEmail
                     textChange={this.textChange}
@@ -134,12 +133,4 @@ DesktopContainer.propTypes = {
   children: PropTypes.node,
 }
 
-const mapDispatchToProps = dispatch => {
-  return {
-    send: mail => dispatch(sendEmailThunk(mail)),
-  }
-}
-
-export default connect(null, mapDispatchToProps)(DesktopContainer)
-
-// export default DesktopContainer
+export default DesktopContainer

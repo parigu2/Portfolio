@@ -28,7 +28,7 @@ const Introduction = () => (
         </p>
       </Grid.Column>
       <Grid.Column floated='right' width={6}>
-        <Image bordered rounded size='large' src='/images/wireframe/white-image.png' />
+        {/* <Image bordered rounded size='large' src='/images/wireframe/white-image.png' /> */}
       </Grid.Column>
     </Grid.Row>
     <Grid.Row>

@@ -20,6 +20,11 @@ form div {
   display: inline-block;
 }
 
+#formSpace.field {
+  display: flex;
+  justify-content: space-between;
+}
+
 #formEmail {
   display: flex;
   flex-direction: column;

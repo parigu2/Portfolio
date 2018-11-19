@@ -8,11 +8,28 @@ import {
   Responsive,
   Segment,
   Sidebar,
+  Modal
 } from 'semantic-ui-react'
-import HomepageHeading from './heading.js'
+import {HomepageHeading, FormEmail} from './index'
+import axios from 'axios'
 
 class MobileContainer extends Component {
-  state = {}
+  // state = {}
+  constructor() {
+    super()
+    this.state = {
+      sender: '',
+      name: '',
+      organization: '',
+      subject: '',
+      message: '',
+      modalOpen: false
+    }
+    this.textChange = this.textChange.bind(this)
+    this.handleSubmit = this.handleSubmit.bind(this)
+    this.handleOpen = this.handleOpen.bind(this)
+    this.handleClose = this.handleClose.bind(this)
+  }
 
   handlePusherClick = () => {
     const { sidebarOpened } = this.state
@@ -21,6 +38,35 @@ class MobileContainer extends Component {
   }
 
   handleToggle = () => this.setState({ sidebarOpened: !this.state.sidebarOpened })
+
+  handleOpen() {
+    this.setState({modalOpen: true})
+  }
+
+  handleClose() {
+    this.setState({modalOpen: false})
+  }
+
+  textChange(event) {
+    this.setState({
+      [event.target.name]: event.target.value
+    })
+  }
+
+  async handleSubmit(event) {
+    event.preventDefault()
+
+    axios.post('/api/mail', this.state)
+
+    this.setState({
+      sender: '',
+      name: '',
+      organization: '',
+      subject: '',
+      message: '',
+      modalOpen: false
+    })
+  }
 
   render() {
     const { children } = this.props
@@ -57,9 +103,26 @@ class MobileContainer extends Component {
                     <Icon name='sidebar' />
                   </Menu.Item>
                   <Menu.Item position='right'>
-                    <Button as='a' inverted style={{ marginLeft: '0.5em' }}>
-                      E-MAIL
-                    </Button>
+
+                    <Modal trigger={<Button inverted
+                    style={{ marginLeft: '0.5em' }}
+                    onClick={this.handleOpen}
+                    >E-MAIL</Button>}
+                    open={this.state.modalOpen}
+                    onClose={this.handleClose}>
+                    <Modal.Header>To Minkyu Yang</Modal.Header>
+                    <Modal.Content image>
+                      <Modal.Description>
+                        <FormEmail
+                        textChange={this.textChange}
+                        handleSubmit={this.handleSubmit}
+                        value={this.state}
+                        close={this.handleClose}
+                        />
+                      </Modal.Description>
+                    </Modal.Content>
+                    </Modal>
+
                   </Menu.Item>
                 </Menu>
               </Container>
