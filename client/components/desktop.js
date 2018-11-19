@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types'
 import React, { Component } from 'react'
+import {connect} from 'react-redux'
 import {
   Button,
   Container,
@@ -10,6 +11,8 @@ import {
   Modal
 } from 'semantic-ui-react'
 import {HomepageHeading, FormEmail} from './index'
+import sendEmailThunk from '../store/email'
+import axios from 'axios'
 
 class DesktopContainer extends Component {
   constructor() {
@@ -46,7 +49,15 @@ class DesktopContainer extends Component {
   async handleSubmit(event) {
     event.preventDefault()
 
-    this.setState({modalOpen: false})
+    // await this.props.send(this.state)
+    axios.post('/api/mail', this.state)
+
+    this.setState({
+      sender: '',
+      subject: '',
+      message: '',
+      modalOpen: false
+    })
     alert('Thank you, confirmation e-mail is on the way')
   }
 
@@ -123,4 +134,12 @@ DesktopContainer.propTypes = {
   children: PropTypes.node,
 }
 
-export default DesktopContainer
+const mapDispatchToProps = dispatch => {
+  return {
+    send: mail => dispatch(sendEmailThunk(mail)),
+  }
+}
+
+export default connect(null, mapDispatchToProps)(DesktopContainer)
+
+// export default DesktopContainer

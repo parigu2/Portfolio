@@ -2,10 +2,11 @@ const router = require('express').Router()
 const {mailConfirmation, sendMail} = require('../nodemailer')
 module.exports = router
 
-router.get('/', async (req, res, next) => {
+router.post('/', async (req, res, next) => {
   try {
-    mailConfirmation(email, id)
-    sendMail(mailOptions)
+    const email = req.body
+    console.log(email)
+    await sendMail(mailConfirmation(email))
   } catch (err) {
     next(err)
   }
