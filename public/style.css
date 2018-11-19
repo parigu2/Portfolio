@@ -20,6 +20,11 @@ form div {
   display: inline-block;
 }
 
+#formEmail {
+  display: flex;
+  flex-direction: column;
+}
+
 .modalContent {
   display: flex;
   flex-direction: column;

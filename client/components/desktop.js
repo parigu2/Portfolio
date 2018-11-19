@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types'
 import React, { Component } from 'react'
+import {connect} from 'react-redux'
 import {
   Button,
   Container,
@@ -7,14 +8,58 @@ import {
   Responsive,
   Segment,
   Visibility,
+  Modal
 } from 'semantic-ui-react'
-import HomepageHeading from './heading'
+import {HomepageHeading, FormEmail} from './index'
+import sendEmailThunk from '../store/email'
+import axios from 'axios'
 
 class DesktopContainer extends Component {
-  state = {}
+  constructor() {
+    super()
+    this.state = {
+      sender: '',
+      subject: '',
+      message: '',
+      modalOpen: false
+    }
+    this.textChange = this.textChange.bind(this)
+    this.handleSubmit = this.handleSubmit.bind(this)
+    this.handleOpen = this.handleOpen.bind(this)
+    this.handleClose = this.handleClose.bind(this)
+  }
 
   hideFixedMenu = () => this.setState({ fixed: false })
   showFixedMenu = () => this.setState({ fixed: true })
+
+  handleOpen() {
+    this.setState({modalOpen: true})
+  }
+
+  handleClose() {
+    this.setState({modalOpen: false})
+  }
+
+  textChange(event) {
+    this.setState({
+      [event.target.name]: event.target.value
+    })
+  }
+
+  async handleSubmit(event) {
+    event.preventDefault()
+
+    // await this.props.send(this.state)
+    axios.post('/api/mail', this.state)
+
+    this.setState({
+      sender: '',
+      subject: '',
+      message: '',
+      modalOpen: false
+    })
+    alert('Thank you, confirmation e-mail is on the way')
+  }
 
   render() {
     const { children } = this.props
@@ -50,9 +95,28 @@ class DesktopContainer extends Component {
                 <Menu.Item as='a' href="#project">Project</Menu.Item>
                 <Menu.Item as='a' href="#footer">Contact</Menu.Item>
                 <Menu.Item position='right'>
-                  <Button as='a' inverted={!fixed} primary={fixed} style={{ marginLeft: '0.5em' }}>
-                    E-MAIL
-                  </Button>
+
+                <Modal trigger={<Button inverted={!fixed} primary={fixed}
+                style={{ marginLeft: '0.5em' }}
+                onClick={this.handleOpen}
+                >E-MAIL</Button>}
+                open={this.state.modalOpen}
+                onClose={this.handleClose}>
+                <Modal.Header>Edit Product</Modal.Header>
+                <Modal.Content image>
+                  {/* <Image wrapped size='medium' src={this.state.imageUrl} /> */}
+                    {/* <h2 className="title">Edit Product</h2> */}
+                  <Modal.Description>
+                    <FormEmail
+                    textChange={this.textChange}
+                    handleSubmit={this.handleSubmit}
+                    value={this.state}
+                    close={this.handleClose}
+                    />
+                  </Modal.Description>
+                </Modal.Content>
+                </Modal>
+
                 </Menu.Item>
               </Container>
             </Menu>
@@ -70,4 +134,12 @@ DesktopContainer.propTypes = {
   children: PropTypes.node,
 }
 
-export default DesktopContainer
+const mapDispatchToProps = dispatch => {
+  return {
+    send: mail => dispatch(sendEmailThunk(mail)),
+  }
+}
+
+export default connect(null, mapDispatchToProps)(DesktopContainer)
+
+// export default DesktopContainer
