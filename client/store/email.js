@@ -13,6 +13,7 @@ export const sendEmailThunk = mail => async dispatch => {
   try {
     const res = await axios.post('/mail', mail)
     dispatch(sendEmail(mail))
+
   } catch(err) {
     console.log(err)
   }

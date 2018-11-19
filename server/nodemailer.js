@@ -2,19 +2,21 @@ const nodemailer = require('nodemailer')
 const html = require('html-template-tag')
 
 const option = {
-  service: 'gmail',
-  // host: 'smtp.ethereal.email',
-  // port: 587,
-  // secure: false,
+  // service: 'gmail',
+  // auth: {
+  //   type: 'OAuth2',
+  //   user: process.env.GMAIL_EMAIL,
+  //   clientId: process.env.GMAIL_CLIENT_ID,
+  //   clientSecret: process.env.GMAIL_CLIENT_SECRET
+  //   // user: "parigue@gmail.com",
+  //   // pass: "qkfka210"
+  // }
+  host: 'smtp.msn.com',
+  port: 465,
+  secure: true, // use SSL
   auth: {
-    // user: process.env.GMAIL_EMAIL,
-    // api_key: process.env.GMAIL_SECRET,
-    // pass: process.env.GMAIL_PASS
-    // user: 'scgkae5amywoyngj@ethereal.email',
-    // pass: 'j2W7amf13sDD8CgWUW'
-    type: 'OAuth2',
-    clientId: process.env.GMAIL_CLIENT_ID,
-    clientSecret: process.env.GMAIL_CLIENT_SECRET
+    user: 'parigu2@msn.com',
+    pass: 'Gmlrlwhd87'
   }
 }
 
