@@ -9,7 +9,7 @@ import {
 const Skill = () => (
   <Segment style={{ padding: '0em' }} vertical id="skill">
     <Grid celled='internally' columns='equal' stackable textAlign='center'>
-      <Header as='h2'>"What I do"</Header>
+      <Header as='h2'><Image avatar src='profile.jpeg' />"What I do"</Header>
       <Grid.Row textAlign='center'>
         <Grid.Column style={{ paddingBottom: '5em', paddingTop: '5em' }}>
           <Header as='h3' style={{ fontSize: '2em' }}>
@@ -22,7 +22,6 @@ const Skill = () => (
             "Working Knowledge"
           </Header>
           <p style={{ fontSize: '1.33em' }}>
-            {/* <Image avatar src='/images/avatar/large/nan.jpg' /> */}
             React Native, Waffle.io, Heroku, Mocha, Chai, Illustrator CS5, Adobe PhotoShop, Solidwork, Fortan, Unity, IndexDB
           </p>
         </Grid.Column>

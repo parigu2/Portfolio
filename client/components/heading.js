@@ -30,10 +30,11 @@ const HomepageHeading = ({ mobile }) => (
         marginTop: mobile ? '0.5em' : '1.5em',
       }}
     />
-    <Button primary size='huge'>
-      Learn more
-      <Icon name='right arrow' />
-    </Button>
+    <p style={{ fontSize: '1.33em' }}>
+      {/* <br/><br/><b>"Everything can be transformed creatively"</b><br/> */}
+      <br/><i>"Everything you can imagine is real"<br/>
+      -Pablo Picasso-</i>
+    </p>
   </Container>
 )
 
