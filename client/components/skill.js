@@ -9,20 +9,45 @@ import {
 const Skill = () => (
   <Segment style={{ padding: '0em' }} vertical id="skill">
     <Grid celled='internally' columns='equal' stackable textAlign='center'>
-      <Header as='h2'><Image avatar src='profile.jpeg' />"What I do"</Header>
+      {/* <Header as='h2'><Image avatar src='profile.jpeg' />"What I do"</Header> */}
       <Grid.Row textAlign='center'>
         <Grid.Column style={{ paddingBottom: '5em', paddingTop: '5em' }}>
           <Header as='h3' style={{ fontSize: '2em' }}>
-            "Proficient"
+            "Skill"
           </Header>
-          <p style={{ fontSize: '1.33em' }}>JavaScript, C#, CSS, Node.js, HTML5, Express, Sequelize, SQL, REST, AJAX, Webpack, React, Redux, Git</p>
+          <p style={{ fontSize: '1.33em' }}>
+            JavaScript,
+            Node.js,
+            C#<br/>
+            CSS,
+            HTML5,
+            jQuery<br/>
+            Sequelize,
+            SQL,
+            EXPRESS<br/>
+            AJAX,
+            Webpack,
+            REST<br/>
+            React,
+            Redux,
+            React Native
+          </p>
         </Grid.Column>
         <Grid.Column style={{ paddingBottom: '5em', paddingTop: '5em' }}>
           <Header as='h3' style={{ fontSize: '2em' }}>
-            "Working Knowledge"
+            "Dev Tool"
           </Header>
           <p style={{ fontSize: '1.33em' }}>
-            React Native, Waffle.io, Heroku, Mocha, Chai, Illustrator CS5, Adobe PhotoShop, Solidwork, Fortan, Unity, IndexDB
+            Unity,
+            Cocos Creator<br/>
+            Bootstrap,
+            Semantic UI,
+            Bulma<br/>
+            Git,
+            Waffle.io,
+            Illustrator CS5<br/>
+            Adobe PhotoShop,
+            Indesign CS,
           </p>
         </Grid.Column>
       </Grid.Row>
