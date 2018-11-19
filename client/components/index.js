@@ -1,6 +1,5 @@
 export {default as Navbar} from './navbar'
 export {default as Main} from './main'
-export {default as Contact} from './contact'
 export {default as HomepageHeading} from './heading'
 export {default as DesktopContainer} from './desktop'
 export {default as MobileContainer} from './mobile'
