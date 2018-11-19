@@ -63,16 +63,35 @@ form div {
 }
 
 #projectCard {
+  background-image: url('profile.jpeg');
+  border-radius: 25px;
   margin: 15px;
-  background-color: teal;
   width: 20em;
   height: 13em;
   overflow: hidden;
-  color: rgba(0, 0, 0, 0);
-  -webkit-transition: color 0.5s;
-  transition: color 0.5s;
+  background-color: rgba(0, 128, 128, 0.575);
+  -webkit-transition-duration: 0.6s;
+  transition-duration: 0.6s;
 }
 
 #projectCard:hover {
-  color: rgba(0, 0, 0, 1)
+  background-image: none;
+  background-color: teal;
+}
+
+#projectCardContent {
+  text-align: center;
+  opacity: 0;
+  font-size: 1.05em;
+  -webkit-transition-duration: 0.4s;
+  transition-duration: 0.4s;
+}
+
+#projectCardContent:hover {
+  opacity: 1;
+  font-size: 1em;
+}
+
+#PJpadding {
+  padding: 20px;
 }
