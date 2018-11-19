@@ -69,21 +69,17 @@ class Project extends Component {
                   </div>
                 </Modal.Content>
                 </Modal>
-                {
-                  idx === 2 ?
-                  <Divider
-                  as='h4'
-                  className='header'
-                  horizontal
-                  style={{ margin: '3em 0em', textTransform: 'uppercase' }}>
-                    <p>Side Project</p>
-                  </Divider> :
-                  <Divider style={{ margin: '3em 0em', textTransform: 'uppercase' }}/>
-                }
             </div>)
           })
         }
         </div>
+        <Divider
+          as='h4'
+          className='header'
+          horizontal
+          style={{ margin: '3em 0em', textTransform: 'uppercase' }}>
+          <p>Side Project</p>
+        </Divider>
         <Header as='h3' style={{ fontSize: '2em' }}>
           Did We Tell You About Our Bananas?
         </Header>
@@ -92,9 +88,6 @@ class Project extends Component {
           it's really true. It took years of gene splicing and combinatory DNA research, but our
           bananas can really dance.
         </p>
-        <Button as='a' size='large'>
-          I'm Still Quite Interested
-        </Button>
       </Container>
     </Segment>
     )
