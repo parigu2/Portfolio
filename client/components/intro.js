@@ -28,14 +28,14 @@ const Introduction = () => (
         </p>
       </Grid.Column>
       <Grid.Column floated='right' width={6}>
-        {/* <Image bordered rounded size='large' src='/images/wireframe/white-image.png' /> */}
+        <Image bordered rounded size='large' src='profile.jpeg' />
       </Grid.Column>
     </Grid.Row>
-    <Grid.Row>
+    {/* <Grid.Row>
       <Grid.Column textAlign='center'>
         <Button size='huge'>Check Them Out</Button>
       </Grid.Column>
-    </Grid.Row>
+    </Grid.Row> */}
   </Grid>
   </Segment>
 )

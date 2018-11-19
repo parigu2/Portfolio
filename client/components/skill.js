@@ -8,7 +8,7 @@ import {
 
 const Skill = () => (
   <Segment style={{ padding: '0em' }} vertical id="skill">
-    <Grid celled='internally' columns='equal' stackable>
+    <Grid celled='internally' columns='equal' stackable textAlign='center'>
       <Header as='h2'>"What I do"</Header>
       <Grid.Row textAlign='center'>
         <Grid.Column style={{ paddingBottom: '5em', paddingTop: '5em' }}>
