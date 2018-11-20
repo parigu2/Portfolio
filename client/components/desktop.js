@@ -85,6 +85,7 @@ class DesktopContainer extends Component {
               inverted={!fixed}
               pointing={!fixed}
               secondary={!fixed}
+              borderless
               size='large'
             >
               <Container>
@@ -94,8 +95,9 @@ class DesktopContainer extends Component {
                 <Menu.Item as='a' href="#intro">About</Menu.Item>
                 <Menu.Item as='a' href="#skill">Skill</Menu.Item>
                 <Menu.Item as='a' href="#project">Project</Menu.Item>
-                <Menu.Item as='a' href="#footer">Contact</Menu.Item>
+                <Menu.Item as='a' href="#footer">More</Menu.Item>
                 <Menu.Item position='right'>
+                {/* </Menu.Item> */}
 
                 <Modal trigger={<Button inverted={!fixed} primary={fixed}
                 style={{ marginLeft: '0.5em' }}
@@ -115,7 +117,6 @@ class DesktopContainer extends Component {
                   </Modal.Description>
                 </Modal.Content>
                 </Modal>
-
                 </Menu.Item>
               </Container>
             </Menu>
