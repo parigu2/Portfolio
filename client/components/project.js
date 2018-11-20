@@ -49,11 +49,15 @@ class Project extends Component {
           projects.map((project, idx)=>{
             return (
             <div key={idx} id="projectCard">
+              <div id="projectCardContent">
+              <div id="PJpadding">
               <p style={{ fontSize: '1.33em' }}>
                 {project.detail}
               </p>
               <Modal
-                trigger={<Button basic color='teal'>Read more</Button>}>
+                trigger={
+                <Button basic color='teal'>Read more</Button>
+                }>
                 <Modal.Header>{project.name}</Modal.Header>
                 <Modal.Content image>
                   <div className="modalContent">
@@ -68,7 +72,9 @@ class Project extends Component {
                   </Modal.Description>
                   </div>
                 </Modal.Content>
-                </Modal>
+              </Modal>
+              </div>
+              </div>
             </div>)
           })
         }

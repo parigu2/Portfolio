@@ -110,9 +110,9 @@ class Footer extends Component {
                 </Header>
                 <p></p>
                 <p style={{ fontSize: '0.85em' }}>
+                  Fullstack Software Engineer<br/>
                   Copyright © 2018 Minkyu Roger Yang <br/>
-                  Handcrafted<br/>
-                  Fullstack Software Engineer
+                  Handcrafted
                 </p>
               </Grid.Column>
             </Grid.Row>
