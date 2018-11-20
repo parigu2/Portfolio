@@ -18,7 +18,7 @@ const HomepageHeading = ({ mobile }) => (
         marginTop: mobile ? '2.8em' : '3.5em',
       }}
     />
-    <p id="test"
+    <p id="cssAnimation"
       style={{
         fontSize: mobile ? '0.5em' : '1em',
         fontWeight: 'normal',

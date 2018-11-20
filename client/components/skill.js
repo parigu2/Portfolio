@@ -2,15 +2,13 @@ import React from 'react'
 import {
   Grid,
   Header,
-  Image,
   Segment,
 } from 'semantic-ui-react'
 
 const Skill = () => (
   <Segment style={{ padding: '0em' }} vertical id="skill">
     <Grid celled='internally' columns='equal' stackable textAlign='center'>
-      {/* <Header as='h2'><Image avatar src='profile.jpeg' />"What I do"</Header> */}
-      <Grid.Row textAlign='center'>
+      <Grid.Row textAlign='center' id="skillContent">
         <Grid.Column style={{ paddingBottom: '5em', paddingTop: '5em' }}>
           <Header as='h3' style={{ fontSize: '2em' }}>
             "Skill"
