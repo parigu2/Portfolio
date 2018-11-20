@@ -7,7 +7,10 @@ import {
   Responsive,
   Segment,
   Visibility,
-  Modal
+  Modal,
+  Message,
+  TransitionablePortal,
+  Header
 } from 'semantic-ui-react'
 import {HomepageHeading, FormEmail} from './index'
 import axios from 'axios'
@@ -21,12 +24,15 @@ class DesktopContainer extends Component {
       organization: '',
       subject: '',
       message: '',
-      modalOpen: false
+      modalOpen: false,
+      open: false,
     }
     this.textChange = this.textChange.bind(this)
     this.handleSubmit = this.handleSubmit.bind(this)
     this.handleOpen = this.handleOpen.bind(this)
     this.handleClose = this.handleClose.bind(this)
+    this.transitionOpen = this.transitionOpen.bind(this)
+    this.transitionEnd = this.transitionEnd.bind(this)
   }
 
   hideFixedMenu = () => this.setState({ fixed: false })
@@ -57,9 +63,24 @@ class DesktopContainer extends Component {
       organization: '',
       subject: '',
       message: '',
-      modalOpen: false
+      modalOpen: false,
     })
-    alert('Thank you, confirmation e-mail is on the way')
+
+    setTimeout(this.transitionOpen, 500)
+
+    setTimeout(this.transitionEnd, 3000)
+  }
+
+  transitionOpen() {
+    this.setState({
+      open: true
+    })
+  }
+
+  transitionEnd() {
+    this.setState({
+      open: false
+    })
   }
 
   render() {
@@ -117,6 +138,15 @@ class DesktopContainer extends Component {
                   </Modal.Description>
                 </Modal.Content>
                 </Modal>
+
+                <TransitionablePortal open={this.state.open} transition={{ animation: 'fade', duration: '500' }}>
+                  <Message positive style={{ left: '40%', position: 'fixed', top: '50%', zIndex: 1000 }}>
+                    <Header>The message sent successfully!</Header>
+                    <br/><p>I will response you as soon as possible</p>
+                    <p>Confirmation is on the way to you</p>
+                  </Message>
+                </TransitionablePortal>
+
                 </Menu.Item>
               </Container>
             </Menu>
