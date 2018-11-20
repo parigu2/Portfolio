@@ -67,7 +67,6 @@ class DesktopContainer extends Component {
     })
 
     setTimeout(this.transitionOpen, 500)
-
     setTimeout(this.transitionEnd, 3000)
   }
 

@@ -6,7 +6,9 @@ import {
   Segment,
   Button,
   Popup,
-  Modal
+  Modal,
+  Message,
+  TransitionablePortal
 } from 'semantic-ui-react'
 import {FormEmail} from './index'
 import axios from 'axios'
@@ -20,12 +22,15 @@ class Footer extends Component {
       organization: '',
       subject: '',
       message: '',
-      modalOpen: false
+      modalOpen: false,
+      open: false
     }
     this.textChange = this.textChange.bind(this)
     this.handleSubmit = this.handleSubmit.bind(this)
     this.handleOpen = this.handleOpen.bind(this)
     this.handleClose = this.handleClose.bind(this)
+    this.transitionOpen = this.transitionOpen.bind(this)
+    this.transitionEnd = this.transitionEnd.bind(this)
   }
   handleOpen() {
     this.setState({modalOpen: true})
@@ -53,6 +58,21 @@ class Footer extends Component {
       subject: '',
       message: '',
       modalOpen: false
+    })
+
+    setTimeout(this.transitionOpen, 500)
+    setTimeout(this.transitionEnd, 3000)
+  }
+
+  transitionOpen() {
+    this.setState({
+      open: true
+    })
+  }
+
+  transitionEnd() {
+    this.setState({
+      open: false
     })
   }
 
@@ -102,6 +122,15 @@ class Footer extends Component {
                 </Modal.Description>
               </Modal.Content>
               </Modal>
+
+              <TransitionablePortal open={this.state.open} transition={{ animation: 'fade', duration: '500' }}>
+                <Message positive style={{ left: '40%', position: 'fixed', top: '50%', zIndex: 1000 }}>
+                  <Header>The message sent successfully!</Header>
+                  <br/><p>I will response you as soon as possible</p>
+                  <p>Confirmation is on the way to you</p>
+                </Message>
+              </TransitionablePortal>
+
             </Grid.Row>
             <Grid.Row>
               <Grid.Column width={7}>
