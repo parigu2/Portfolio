@@ -82,7 +82,7 @@ class MobileContainer extends Component {
             <Menu.Item as='a' href="#intro">About</Menu.Item>
             <Menu.Item as='a' href="#skill">Skill</Menu.Item>
             <Menu.Item as='a' href="#project">Project</Menu.Item>
-            <Menu.Item as='a' href="#footer">Contact</Menu.Item>
+            <Menu.Item as='a' href="#footer">More</Menu.Item>
           </Sidebar>
 
           <Sidebar.Pusher
