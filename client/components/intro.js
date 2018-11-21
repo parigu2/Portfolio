@@ -1,6 +1,5 @@
 import React from 'react'
 import {
-  Button,
   Grid,
   Header,
   Image,
@@ -32,11 +31,6 @@ const Introduction = () => (
         <Image bordered rounded size='large' src='profile.jpeg' />
       </Grid.Column>
     </Grid.Row>
-    {/* <Grid.Row>
-      <Grid.Column textAlign='center'>
-        <Button size='huge'>Check Them Out</Button>
-      </Grid.Column>
-    </Grid.Row> */}
   </Grid>
   </Segment>
 )
