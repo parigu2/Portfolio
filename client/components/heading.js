@@ -25,8 +25,8 @@ const HomepageHeading = ({ mobile }) => (
         marginBottom: 0,
         marginTop: mobile ? '1em' : '3em',
       }}
-    >Fullstack Software Developer<span>Minkyu Roger Yang</span>fdfd</p>
-    <p style={{ fontSize: mobile ? '1em' : '1.33em' }}>
+    >Fullstack Software Engineer<span>Minkyu Roger Yang</span> </p>
+    <p style={{ fontSize: mobile ? '1em' : '1.33em', position: "relative", left: "1.5vw"}}>
       <i>"Everything you can imagine is real"<br/>
       -Pablo Picasso-</i>
     </p>

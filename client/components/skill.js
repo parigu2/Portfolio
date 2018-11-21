@@ -9,9 +9,10 @@ const Skill = () => (
   <Segment style={{ padding: '0em' }} vertical id="skill">
     <Grid celled='internally' columns='equal' stackable textAlign='center'>
       <Grid.Row textAlign='center' id="skillContent">
-        <Grid.Column style={{ paddingBottom: '5em', paddingTop: '5em' }}>
-          <Header as='h3' style={{ fontSize: '2em' }}>
-            "Skill"
+        <Grid.Column style={{ paddingBottom: '5em', paddingTop: '5em', display: 'flex', justifyContent: 'center'}}>
+          <div id="skillEachContent" >
+          <Header as='h3' style={{ fontSize: '2em', fontFamily: 'Anton', letterSpacing: '0.2em' }}>
+            "SKILL"
           </Header>
           <p style={{ fontSize: '1.33em' }}>
             JavaScript,
@@ -30,10 +31,12 @@ const Skill = () => (
             Redux,
             React Native
           </p>
+          </div>
         </Grid.Column>
-        <Grid.Column style={{ paddingBottom: '5em', paddingTop: '5em' }}>
-          <Header as='h3' style={{ fontSize: '2em' }}>
-            "Dev Tool"
+        <Grid.Column style={{ paddingBottom: '5em', paddingTop: '5em', display: 'flex', justifyContent: 'center'}}>
+        <div id="skillEachContent" >
+          <Header as='h3' style={{ fontSize: '2em', fontFamily: 'Anton', letterSpacing: '0.2em' }}>
+            "USE"
           </Header>
           <p style={{ fontSize: '1.33em' }}>
             Unity,
@@ -45,8 +48,9 @@ const Skill = () => (
             Waffle.io,
             Illustrator CS5<br/>
             Adobe PhotoShop,
-            Indesign CS,
+            InDesign,
           </p>
+        </div>
         </Grid.Column>
       </Grid.Row>
     </Grid>

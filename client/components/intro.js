@@ -10,7 +10,7 @@ import {
 const Introduction = () => (
   <Segment style={{ padding: '8em 0em' }} vertical id="intro">
   <Grid container stackable verticalAlign='middle'>
-    <Header as='h2' style={{ fontSize: '2.5em' }}>
+    <Header as='h2' style={{ fontSize: '2.5em', fontFamily: 'Anton', letterSpacing: '0.15em' }}>
       What is Minkyu-Script?
     </Header>
     <Grid.Row>
