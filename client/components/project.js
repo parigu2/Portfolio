@@ -37,16 +37,8 @@ const projects = [{
 }]
 
 class Project extends Component {
-  // constructor() {
-  //   super()
-  //   this.state = {
-
-  //   }
-
-  // }
 
   render() {
-    let test = []
     return (
       <Segment style={{ padding: '8em 0em' }} vertical
       id="project">
@@ -94,7 +86,7 @@ class Project extends Component {
                           {
                             project.links?
                             <div>
-                            <h2>Link</h2>
+                            <h2 className="title">Link</h2>
                             <ul>
                             {
                               project.links.map((link, idx)=><li key={idx}>{link['type']}<a href={link['link']}>{link['link']}</a></li>

@@ -4,6 +4,7 @@ body {
 
 a {
   text-decoration: none;
+  max-width: 80vw;
 }
 
 label {
@@ -44,6 +45,11 @@ form div {
   margin: 0 5vw;
 }
 
+.image.content {
+  max-height: 80vh;
+  overflow: scroll;
+}
+
 .ui.modal.transition.visible.active {
   width: 85vw;
   min-width: 350px;
@@ -70,7 +76,6 @@ form div {
 }
 
 #projectCard {
-  /* background-image: url('forest.jpeg'); */
   background-size: 110%;
   border-radius: 25px;
   margin: 15px;
@@ -108,7 +113,7 @@ form div {
 #skill {
   background-image: url('skillback.jpeg');
   background-size: 100%;
-  background-position-y: 75%;
+  background-position-y: 70%;
   background-attachment: fixed;
 }
 
@@ -122,6 +127,24 @@ form div {
   width: 36vw;
   min-width: 250px;
   padding: 5vw;
+}
+
+input {
+  margin: 15px 0;
+}
+
+#input {
+  margin: 4px 0 4px 0;
+}
+
+#inputHalf {
+  width: 35vw;
+  margin: 4px 0 0 0;
+}
+
+#point {
+  position: relative;
+  left: 10px;
 }
 
 
@@ -166,4 +189,11 @@ span {
 @-webkit-keyframes aitf {
 	0% { background-position: 0% 50%; }
 	100% { background-position: 100% 50%; }
+}
+
+@media only screen and (max-width: 600px) {
+  #skill {
+    background-size: 250%;
+    background-position-x: -80%;
+  }
 }

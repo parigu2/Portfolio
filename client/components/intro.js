@@ -28,7 +28,7 @@ const Introduction = () => (
         </p>
       </Grid.Column>
       <Grid.Column floated='right' width={6}>
-        <Image bordered rounded size='large' src='profile.jpeg' />
+        <Image bordered rounded size='large' src='profile.jpeg' id='profile'/>
       </Grid.Column>
     </Grid.Row>
   </Grid>

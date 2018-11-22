@@ -14,7 +14,6 @@ import {HomepageHeading, FormEmail} from './index'
 import axios from 'axios'
 
 class MobileContainer extends Component {
-  // state = {}
   constructor() {
     super()
     this.state = {
@@ -76,13 +75,27 @@ class MobileContainer extends Component {
       <Responsive maxWidth={Responsive.onlyMobile.maxWidth}>
         <Sidebar.Pushable>
           <Sidebar as={Menu} animation='uncover' inverted vertical visible={sidebarOpened}>
-            <Menu.Item as='a' href="home">
-              Home
+            <Menu.Item as='a'
+            href="#intro"
+            onClick={this.handlePusherClick}>
+              About
             </Menu.Item>
-            <Menu.Item as='a' href="#intro">About</Menu.Item>
-            <Menu.Item as='a' href="#skill">Skill</Menu.Item>
-            <Menu.Item as='a' href="#project">Project</Menu.Item>
-            <Menu.Item as='a' href="#footer">More</Menu.Item>
+            <Menu.Item as='a'
+            href="#skill"
+            onClick={this.handlePusherClick}>
+              Skill
+            </Menu.Item>
+            <Menu.Item as='a'
+            href="#project"
+            onClick={this.handlePusherClick}>
+              Project
+            </Menu.Item>
+            <Menu.Item as='a'
+            href="#footer"
+            onClick={this.handlePusherClick}
+            >
+              More
+            </Menu.Item>
           </Sidebar>
 
           <Sidebar.Pusher
