@@ -1,4 +1,3 @@
-export {default as Navbar} from './navbar'
 export {default as Main} from './main'
 export {default as HomepageHeading} from './heading'
 export {default as DesktopContainer} from './desktop'
@@ -8,4 +7,4 @@ export {default as Project} from './project'
 export {default as Skill} from './skill'
 export {default as Footer} from './footer'
 export {FormEmail} from './formEmail'
-export {Login, Signup} from './auth-form'
+
