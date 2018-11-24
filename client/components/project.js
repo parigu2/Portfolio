@@ -22,18 +22,19 @@ const projects = [{
   }]
 },{
   name: 'Stackaton Proejct - 3D Game',
-  brief: '3D game in which multiple players',
+  brief: '3D game in multiple players',
   detail: [`Won Stackathon in Fullstack Academy - most people’s choice`, 'Developed in C# to create a 3D environment scene running on Unity 3D engine', 'Added Network Manager HUB component for multiple players to be able to host a network game or join an existing game', 'Added component of Network Transform and Network Identity on game objects to connect to server', 'Wrote network behavior player scripts which accept command from local players'],
   image: 'forest.jpeg',
   url: `OuLYWN4k3nk`,
 },{
   name: 'Grace Shopper Project - Maskot',
   brief: `E-Commerce Website for selling masks`,
-  detail: [`Third Instead of focusing on content creation and hard work, we have learned how`],
+  detail: [`Users can add products on their cart and proceed order with online payment`, `Logged-in Users can see their pervious order and current order status`, `Users can search products by name or categories`, `An admin can add, edit and remove products`, `An admin can manage order process`, `E-mail confirmation by changing order status`, `Online credit card payment available`],
   image: 'maskot.jpeg',
   links: [
-    {'type':'Github: ', 'link': 'https://github.com/silvertigers/maskot'
-  }]
+    {'type':'Github: ', 'link': 'https://github.com/silvertigers/maskot'},
+    {'type':'Demo: ', 'link': 'https://maskot.herokuapp.com/'}
+  ]
 }]
 
 class Project extends Component {
