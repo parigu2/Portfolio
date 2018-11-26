@@ -27,7 +27,7 @@ const mailConfirmation = mail => ({
   from: 'no-reply@confirmation.com',
   to: mail.sender,
   subject: `E-mail confirmation sent to Minkyu Yang`,
-  html: html`<h1>Thank you ${mail.sender}</h1>
+  html: html`<h1>Thank you ${mail.name}</h1>
   <p>Your e-mail has been sent to Minkyu Yang</p>
   <p>I will respond you as soon as possible</p>
   <p>Thank you!</p>
