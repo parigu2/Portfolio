@@ -18,13 +18,13 @@ const Introduction = () => (
           Goal-oriented programming
         </Header>
         <p style={{ fontSize: '1.33em' }}>
-          <i>To step forward to a better life, I like to make long and short term plans and achieve the goals by stages.  This systematic method guide me to right direction and done working in time</i>
+          <i>To step forward to a better life, I like to make long and short term plans and achieve the goals by stages.  This systematic method guides me to right direction and finish work time</i>
         </p>
         <Header as='h3' style={{ fontSize: '1.7em' }}>
           Unlimited compatibility
         </Header>
         <p style={{ fontSize: '1.33em' }}>
-          <i>I don't afraid to learn a new technology and confident in my ability to quickly learn.  In this improvement, I can fit in many roles to work.<br/>Also, I'm a gentle disposition person to makes feel comfortable to others, I love to bond into social group in my spare time</i>
+          <i>I am not afraid to learn new technologies and have confidence in my ability to learn quickly.  With these strengths, I can fit in many roles to work.<br/>Also, I am a person of gentle disposition to make others feel comfortable, I love to bond in social groups in my spare time</i>
         </p>
       </Grid.Column>
       <Grid.Column floated='right' width={6}>
