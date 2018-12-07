@@ -24,7 +24,7 @@ const Introduction = () => (
           Unlimited compatibility
         </Header>
         <p style={{ fontSize: '1.33em' }}>
-          <i>I am not afraid to learn new technologies and have confidence in my ability to learn quickly.  With these strengths, I can fit in many roles to work.<br/>Also, I am a person of gentle disposition to make others feel comfortable, I love to bond in social groups in my spare time</i>
+          <i>I am not afraid to learn new technologies and have confidence in my ability to learn quickly.  With these strengths, I can fit in many roles to work.<br/>Also, I am a person of gentle disposition to make others feel comfortable, I love to bond in social groups in my spare time.</i>
         </p>
       </Grid.Column>
       <Grid.Column floated='right' width={6}>
